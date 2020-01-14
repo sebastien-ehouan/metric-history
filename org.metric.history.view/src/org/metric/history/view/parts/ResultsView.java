@@ -192,7 +192,7 @@ public class ResultsView {
 		alterCmd = new Text(parent, SWT.BORDER);
 		
 		spaceLabel4 = new Label(parent, SWT.CENTER);
-		spaceLabel4.setText("** Opptional");
+		spaceLabel4.setText("** Optional");
 		
 		Button btnAnalyze = new Button(parent, SWT.NONE);
 		btnAnalyze.setText("Analyze");
@@ -209,6 +209,7 @@ public class ResultsView {
             public void handleEvent(Event event) {
             	alter_cmd = "\"\""+mhpath+"\\metric-history\" collect \""+mhpath+"\\" +versionText.getText()+ "\" \"" +lpath+ "\" \"" +opath+ "\" SOURCEMETER -e=\""+smpath+"\\SourceMeterJava.exe\" > \""+opath+"\\output-log.txt\"";
         		alterCmd.setText(alter_cmd);
+        		alter_cmd = alterCmd.getText();
             }
         });
 		
